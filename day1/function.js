@@ -1,6 +1,5 @@
 let words = sentence => {
-    if(
-        Number(sentence) || typeof(sentence) == 'function' || typeof sentence == 'boolean'
+    if(Number(sentence) || typeof(sentence) == 'function' || typeof sentence == 'boolean'
     ) return 'Invalid Input';
 
     let i = 0;
@@ -9,7 +8,9 @@ let words = sentence => {
     let letter;
 
     for (i, len = word.length; i < len; i++) {
-        letter = word[i];
+        if(word[i] !== " "){
+            letter = word[i];
+        }
         histogram[letter] = (histogram[letter] || 0) + 1;
     }
 
