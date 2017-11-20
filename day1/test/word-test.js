@@ -22,6 +22,13 @@ describe("One word", () => {
     });
 });
 
+describe("Number", () => {
+    it('Should return a Invalid input message', () => {
+        const result = words(12345)
+        assert.deepEqual(result, 'Invalid Input');
+    });
+});
+
 describe("boolean", () => {
     it('Should return a Invalid input message', () => {
         const result = words(true)
