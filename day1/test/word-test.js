@@ -30,4 +30,8 @@ describe("object testing", () => {
         const result = words()
         assert.deepEqual(result, 'Invalid Input, Argument should be a string!');
     });
+    it('Non-Alphanumeric character', () => {
+        const result = words('\\test\\red\\bob\\fred\\new')
+        assert.deepEqual(result, { testredbobfrednew: 1 });
+    });
 });
