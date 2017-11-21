@@ -4,7 +4,7 @@
   "description": "TDD test for bootcamp functions",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./day1/test/*.js"
+    "test": "mocha --require babel-polyfill --require babel-register ./day1/test/*.js ./day2/test/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/topseySuave/bootcamp-execises#readme",
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
   },
