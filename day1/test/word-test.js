@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const words = require('../function');
+const words = require('../words');
 
 describe("object testing", () => {
     it('Should return an object { hello: 1, world: 1, the: 1, cat: 1, sat: 1, on: 1, a: 1, mat: 1 }', () => {
@@ -25,5 +25,9 @@ describe("object testing", () => {
     it('Should return "a is not a word.!"', () => {
         const result = words('a')
         assert.deepEqual(result, 'a is not a word.!');
+    });
+    it('Should return a Invalid input message', () => {
+        const result = words()
+        assert.deepEqual(result, 'Invalid Input, Argument should be a string!');
     });
 });

@@ -1,6 +1,7 @@
 let words = sentence => {
     if (typeof sentence !== 'string') return 'Invalid Input, Argument should be a string!';
     if(sentence.length <= 1) return sentence + ' is not a word.!';
+    // if(sentence == null) return ;
 
     let i = 0;
     let word = sentence.split(" ");
