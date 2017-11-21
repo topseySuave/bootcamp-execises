@@ -47,6 +47,7 @@ class FirstClass extends Seat {
           this.seatsAvailable[this.seatNum] = this.seatNum;
         }
       }
+      return `Checked In ${this.getName()}`;
     }
   }
   
@@ -82,6 +83,7 @@ class EconomyClass extends Seat {
           this.seatsAvailable[this.seatNum] = this.seatNum;
         }
       }
+      return `Checked In ${this.getName()}`;
     }
   }
   
