@@ -10,7 +10,7 @@ const words = sentence => {
 
     for (i, len = word.length; i < len; i++) {
         word[i] = word[i].replace(/[^0-9a-z]/gi, '');
-        if(word[i] !== " "){
+        if(word[i] !== ""){
             letter = word[i];
         }
         histogram[letter] = (histogram[letter] || 0) + 1;
