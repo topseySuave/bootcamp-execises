@@ -16,10 +16,14 @@ describe("object testing", () => {
     });
     it('Should return a Invalid input message', () => {
         const result = words(12345)
-        assert.deepEqual(result, 'Invalid Input');
+        assert.deepEqual(result, 'Invalid Input, Argument should be a string!');
     });
     it('Should return a Invalid input message', () => {
         const result = words(true)
-        assert.deepEqual(result, 'Invalid Input');
+        assert.deepEqual(result, 'Invalid Input, Argument should be a string!');
+    });
+    it('Should return "a is not a word.!"', () => {
+        const result = words('a')
+        assert.deepEqual(result, 'a is not a word.!');
     });
 });
